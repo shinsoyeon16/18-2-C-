@@ -1,0 +1,45 @@
+github bash 사용K는거
+
+**커밋**
+git init
+git add [파일이름]
+git config --global user.name
+git config --global user.email
+git commit -m "커밋"
+git commit -C HEAD -a --amend //같은 커밋을 다시사용하여 커밋
+			// -c를 사용시 커밋 편집기 실행
+
+**푸쉬**
+git remote add origin 깃허브주소
+git push -u origin master
+//강제로 올리기
+git push -u origin master --force
+
+**삭제**
+//원격과 로컬저장소 둘다 삭제
+git rm [파일이름]
+
+//원격만 삭제, 로컬은 냅둠
+git rm --cashed [파일]
+
+//폴더삭제
+git rm -r --cached [폴더이름]
+
+**클론**
+git clone [깃허브 주소]
+
+**브랜치**
+git branch [이름] //브랜치 생성
+git branch //브랜치 확인
+git branch -r  //  로컬에 저장된 리모트 브랜치 조회
+git branch -a  //  모든 브랜치 정보 조회
+git branch -d [이름] // 로컬 브랜치 삭제
+git push origin :[브랜치이름] // remote 브랜치 삭제
+git checkout [브랜치] //브랜치 변경
+git checkout -b [브랜치] //브래치 생성하고 그걸로 변경
+git merge [병합할브랜치] // 지금있는 브랜치에 병합할브랜치가 합쳐짐
+
+**업뎃**
+git remote update
+git fetch
+git fetch --prune
