@@ -1,0 +1,7 @@
+C:\dev\test1112-GradeBook2\obj\Debug\test1112-GradeBook2.csprojAssemblyReference.cache
+C:\dev\test1112-GradeBook2\obj\Debug\test1112-GradeBook2.csproj.CoreCompileInputs.cache
+C:\dev\test1112-GradeBook2\bin\Debug\test1112-GradeBook2.exe.config
+C:\dev\test1112-GradeBook2\bin\Debug\test1112-GradeBook2.exe
+C:\dev\test1112-GradeBook2\bin\Debug\test1112-GradeBook2.pdb
+C:\dev\test1112-GradeBook2\obj\Debug\test1112-GradeBook2.exe
+C:\dev\test1112-GradeBook2\obj\Debug\test1112-GradeBook2.pdb
