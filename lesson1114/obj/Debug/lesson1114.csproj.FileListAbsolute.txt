@@ -1,0 +1,7 @@
+C:\dev\lesson1114\bin\Debug\lesson1114.exe.config
+C:\dev\lesson1114\bin\Debug\lesson1114.exe
+C:\dev\lesson1114\bin\Debug\lesson1114.pdb
+C:\dev\lesson1114\obj\Debug\lesson1114.csprojAssemblyReference.cache
+C:\dev\lesson1114\obj\Debug\lesson1114.csproj.CoreCompileInputs.cache
+C:\dev\lesson1114\obj\Debug\lesson1114.exe
+C:\dev\lesson1114\obj\Debug\lesson1114.pdb
