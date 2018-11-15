@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson1115-YICMS.BL", "lesson1115-YICMS.BL\lesson1115-YICMS.BL.csproj", "{DF8C04A9-C581-41B4-9AA5-DF0A4EED60E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "YICMS.Test", "YICMS.Test", "{DEC1E42C-8FBB-44CC-9D2C-46E1380F2747}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmsTest", "CmsTest\CmsTest.csproj", "{E6B06749-5550-4272-BA9B-30D9CFA11909}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF8C04A9-C581-41B4-9AA5-DF0A4EED60E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8C04A9-C581-41B4-9AA5-DF0A4EED60E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8C04A9-C581-41B4-9AA5-DF0A4EED60E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8C04A9-C581-41B4-9AA5-DF0A4EED60E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6B06749-5550-4272-BA9B-30D9CFA11909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6B06749-5550-4272-BA9B-30D9CFA11909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6B06749-5550-4272-BA9B-30D9CFA11909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6B06749-5550-4272-BA9B-30D9CFA11909}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6B06749-5550-4272-BA9B-30D9CFA11909} = {DEC1E42C-8FBB-44CC-9D2C-46E1380F2747}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9892DEAB-C384-43CA-8742-52B1120DF1C4}
+	EndGlobalSection
+EndGlobal
