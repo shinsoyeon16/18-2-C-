@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YICMS.BL", "YICMS.BL\YICMS.BL.csproj", "{EFB73BC0-D009-41F3-B39D-4F461823E08A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmsTest", "CmsTest\CmsTest.csproj", "{EAF99063-0744-4BE0-87D3-73E97E84F852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YonginCMS.Win", "YonginCMS.Win\YonginCMS.Win.csproj", "{E9CE4D3B-0CCA-4427-8AD3-AFF74CF67091}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB73BC0-D009-41F3-B39D-4F461823E08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB73BC0-D009-41F3-B39D-4F461823E08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB73BC0-D009-41F3-B39D-4F461823E08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB73BC0-D009-41F3-B39D-4F461823E08A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF99063-0744-4BE0-87D3-73E97E84F852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF99063-0744-4BE0-87D3-73E97E84F852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF99063-0744-4BE0-87D3-73E97E84F852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF99063-0744-4BE0-87D3-73E97E84F852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CE4D3B-0CCA-4427-8AD3-AFF74CF67091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CE4D3B-0CCA-4427-8AD3-AFF74CF67091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CE4D3B-0CCA-4427-8AD3-AFF74CF67091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CE4D3B-0CCA-4427-8AD3-AFF74CF67091}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B91AA4FF-90F3-4006-A853-04ECEBDCC3C6}
+	EndGlobalSection
+EndGlobal

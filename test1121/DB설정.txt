@@ -1,0 +1,11 @@
+create database YICMS;
+use YICMS;
+
+create table Customer (
+CustomerId  int auto_increment primary key,
+FirstName varchar(30) not null,
+LastName varchar(20) not null,
+EmailAddress varchar(50) not null,
+HomeAddress varchar(100) not null,
+WorkAddress varchar(100) not null );
+
