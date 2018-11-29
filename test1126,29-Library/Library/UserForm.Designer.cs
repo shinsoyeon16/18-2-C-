@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewUser = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -38,9 +40,11 @@
             this.tbxUserName = new System.Windows.Forms.TextBox();
             this.lblUserId = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.dataManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataManagerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -61,9 +65,11 @@
             this.dataGridViewUser.RowTemplate.Height = 23;
             this.dataGridViewUser.Size = new System.Drawing.Size(264, 588);
             this.dataGridViewUser.TabIndex = 0;
+            this.dataGridViewUser.CurrentCellChanged += new System.EventHandler(this.DataGridViewUser_CurrentCellChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -78,23 +84,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "사용자 추가/수정/삭제";
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(264, 20);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(49, 66);
+            this.btnClear.TabIndex = 10;
+            this.btnClear.Text = "모두 지우기";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(112, 118);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(92, 26);
-            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(215, 118);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(92, 26);
-            this.btnDelete.TabIndex = 17;
+            this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -108,22 +126,22 @@
             // 
             // tbxUserId
             // 
-            this.tbxUserId.Location = new System.Drawing.Point(85, 23);
+            this.tbxUserId.Location = new System.Drawing.Point(85, 27);
             this.tbxUserId.Name = "tbxUserId";
             this.tbxUserId.Size = new System.Drawing.Size(158, 21);
-            this.tbxUserId.TabIndex = 11;
+            this.tbxUserId.TabIndex = 10;
             // 
             // tbxUserName
             // 
-            this.tbxUserName.Location = new System.Drawing.Point(85, 50);
+            this.tbxUserName.Location = new System.Drawing.Point(85, 65);
             this.tbxUserName.Name = "tbxUserName";
             this.tbxUserName.Size = new System.Drawing.Size(158, 21);
-            this.tbxUserName.TabIndex = 10;
+            this.tbxUserName.TabIndex = 11;
             // 
             // lblUserId
             // 
             this.lblUserId.AutoSize = true;
-            this.lblUserId.Location = new System.Drawing.Point(15, 26);
+            this.lblUserId.Location = new System.Drawing.Point(15, 30);
             this.lblUserId.Name = "lblUserId";
             this.lblUserId.Size = new System.Drawing.Size(68, 12);
             this.lblUserId.TabIndex = 9;
@@ -132,11 +150,15 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(15, 53);
+            this.lblUserName.Location = new System.Drawing.Point(15, 68);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(41, 12);
             this.lblUserName.TabIndex = 8;
             this.lblUserName.Text = "이름 : ";
+            // 
+            // dataManagerBindingSource
+            // 
+            this.dataManagerBindingSource.DataSource = typeof(Library.DataManager);
             // 
             // UserForm
             // 
@@ -151,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataManagerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +190,7 @@
         private System.Windows.Forms.Label lblUserId;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.DataGridView dataGridViewUser;
+        private System.Windows.Forms.BindingSource dataManagerBindingSource;
+        private System.Windows.Forms.Button btnClear;
     }
 }

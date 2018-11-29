@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblBookCount_Overdue2 = new System.Windows.Forms.Label();
+            this.lblBookCount_Borrowed2 = new System.Windows.Forms.Label();
+            this.lblUserCount2 = new System.Windows.Forms.Label();
+            this.lblBookCount_Total2 = new System.Windows.Forms.Label();
             this.lblBookCount_Overdue = new System.Windows.Forms.Label();
             this.lblBookCount_Borrowed = new System.Windows.Forms.Label();
             this.lblUserCount = new System.Windows.Forms.Label();
             this.lblBookCount_Total = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.tbxBookName = new System.Windows.Forms.TextBox();
             this.tbxUserId = new System.Windows.Forms.TextBox();
             this.tbxIsbn = new System.Windows.Forms.TextBox();
@@ -49,10 +54,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.도서관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.사용자관리ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblBookCount_Total2 = new System.Windows.Forms.Label();
-            this.lblUserCount2 = new System.Windows.Forms.Label();
-            this.lblBookCount_Borrowed2 = new System.Windows.Forms.Label();
-            this.lblBookCount_Overdue2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,6 +79,38 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "도서관 현황";
+            // 
+            // lblBookCount_Overdue2
+            // 
+            this.lblBookCount_Overdue2.AutoSize = true;
+            this.lblBookCount_Overdue2.Location = new System.Drawing.Point(142, 98);
+            this.lblBookCount_Overdue2.Name = "lblBookCount_Overdue2";
+            this.lblBookCount_Overdue2.Size = new System.Drawing.Size(0, 12);
+            this.lblBookCount_Overdue2.TabIndex = 7;
+            // 
+            // lblBookCount_Borrowed2
+            // 
+            this.lblBookCount_Borrowed2.AutoSize = true;
+            this.lblBookCount_Borrowed2.Location = new System.Drawing.Point(142, 72);
+            this.lblBookCount_Borrowed2.Name = "lblBookCount_Borrowed2";
+            this.lblBookCount_Borrowed2.Size = new System.Drawing.Size(0, 12);
+            this.lblBookCount_Borrowed2.TabIndex = 6;
+            // 
+            // lblUserCount2
+            // 
+            this.lblUserCount2.AutoSize = true;
+            this.lblUserCount2.Location = new System.Drawing.Point(85, 44);
+            this.lblUserCount2.Name = "lblUserCount2";
+            this.lblUserCount2.Size = new System.Drawing.Size(0, 12);
+            this.lblUserCount2.TabIndex = 5;
+            // 
+            // lblBookCount_Total2
+            // 
+            this.lblBookCount_Total2.AutoSize = true;
+            this.lblBookCount_Total2.Location = new System.Drawing.Point(102, 20);
+            this.lblBookCount_Total2.Name = "lblBookCount_Total2";
+            this.lblBookCount_Total2.Size = new System.Drawing.Size(0, 12);
+            this.lblBookCount_Total2.TabIndex = 4;
             // 
             // lblBookCount_Overdue
             // 
@@ -117,6 +150,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnClear);
             this.groupBox2.Controls.Add(this.tbxBookName);
             this.groupBox2.Controls.Add(this.tbxUserId);
             this.groupBox2.Controls.Add(this.tbxIsbn);
@@ -132,19 +166,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "대여/반납";
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(260, 89);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(99, 26);
+            this.btnClear.TabIndex = 10;
+            this.btnClear.Text = "모두 지우기";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // tbxBookName
             // 
             this.tbxBookName.Location = new System.Drawing.Point(82, 60);
             this.tbxBookName.Name = "tbxBookName";
             this.tbxBookName.Size = new System.Drawing.Size(158, 21);
-            this.tbxBookName.TabIndex = 7;
+            this.tbxBookName.TabIndex = 6;
             // 
             // tbxUserId
             // 
             this.tbxUserId.Location = new System.Drawing.Point(82, 95);
             this.tbxUserId.Name = "tbxUserId";
             this.tbxUserId.Size = new System.Drawing.Size(158, 21);
-            this.tbxUserId.TabIndex = 6;
+            this.tbxUserId.TabIndex = 7;
             // 
             // tbxIsbn
             // 
@@ -185,7 +229,7 @@
             this.btnReturn.Location = new System.Drawing.Point(260, 55);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(99, 26);
-            this.btnReturn.TabIndex = 1;
+            this.btnReturn.TabIndex = 9;
             this.btnReturn.Text = "반납";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -195,7 +239,7 @@
             this.btnBorrow.Location = new System.Drawing.Point(260, 24);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(99, 25);
-            this.btnBorrow.TabIndex = 0;
+            this.btnBorrow.TabIndex = 8;
             this.btnBorrow.Text = "대여";
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
@@ -218,6 +262,7 @@
             this.dataGridViewBook.RowTemplate.Height = 23;
             this.dataGridViewBook.Size = new System.Drawing.Size(796, 148);
             this.dataGridViewBook.TabIndex = 0;
+            this.dataGridViewBook.CurrentCellChanged += new System.EventHandler(this.DataGridViewBook_CurrentCellChanged);
             // 
             // groupBox4
             // 
@@ -237,6 +282,7 @@
             this.dataGridViewUser.RowTemplate.Height = 23;
             this.dataGridViewUser.Size = new System.Drawing.Size(793, 120);
             this.dataGridViewUser.TabIndex = 0;
+            this.dataGridViewUser.CurrentCellChanged += new System.EventHandler(this.DataGridViewUser_CurrentCellChanged);
             // 
             // menuStrip1
             // 
@@ -248,7 +294,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(873, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // 도서관리ToolStripMenuItem
             // 
@@ -263,38 +308,6 @@
             this.사용자관리ToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.사용자관리ToolStripMenuItem.Text = "사용자 관리";
             this.사용자관리ToolStripMenuItem.Click += new System.EventHandler(this.사용자관리ToolStripMenuItem_Click);
-            // 
-            // lblBookCount_Total2
-            // 
-            this.lblBookCount_Total2.AutoSize = true;
-            this.lblBookCount_Total2.Location = new System.Drawing.Point(102, 20);
-            this.lblBookCount_Total2.Name = "lblBookCount_Total2";
-            this.lblBookCount_Total2.Size = new System.Drawing.Size(0, 12);
-            this.lblBookCount_Total2.TabIndex = 4;
-            // 
-            // lblUserCount2
-            // 
-            this.lblUserCount2.AutoSize = true;
-            this.lblUserCount2.Location = new System.Drawing.Point(85, 44);
-            this.lblUserCount2.Name = "lblUserCount2";
-            this.lblUserCount2.Size = new System.Drawing.Size(0, 12);
-            this.lblUserCount2.TabIndex = 5;
-            // 
-            // lblBookCount_Borrowed2
-            // 
-            this.lblBookCount_Borrowed2.AutoSize = true;
-            this.lblBookCount_Borrowed2.Location = new System.Drawing.Point(142, 72);
-            this.lblBookCount_Borrowed2.Name = "lblBookCount_Borrowed2";
-            this.lblBookCount_Borrowed2.Size = new System.Drawing.Size(0, 12);
-            this.lblBookCount_Borrowed2.TabIndex = 6;
-            // 
-            // lblBookCount_Overdue2
-            // 
-            this.lblBookCount_Overdue2.AutoSize = true;
-            this.lblBookCount_Overdue2.Location = new System.Drawing.Point(142, 98);
-            this.lblBookCount_Overdue2.Name = "lblBookCount_Overdue2";
-            this.lblBookCount_Overdue2.Size = new System.Drawing.Size(0, 12);
-            this.lblBookCount_Overdue2.TabIndex = 7;
             // 
             // LibraryManager
             // 
@@ -336,9 +349,6 @@
         private System.Windows.Forms.Button btnBorrow;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 도서관리ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 사용자관리ToolStripMenuItem;
         private System.Windows.Forms.Label lblBookName;
         private System.Windows.Forms.Label lblUserId;
         private System.Windows.Forms.Label lblIsbn;
@@ -351,5 +361,9 @@
         private System.Windows.Forms.Label lblBookCount_Borrowed2;
         private System.Windows.Forms.Label lblUserCount2;
         private System.Windows.Forms.Label lblBookCount_Total2;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 도서관리ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 사용자관리ToolStripMenuItem;
     }
 }

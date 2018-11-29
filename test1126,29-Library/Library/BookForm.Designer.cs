@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -67,46 +69,59 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "도서 추가/수정/삭제";
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(270, 20);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(82, 105);
+            this.btnClear.TabIndex = 29;
+            this.btnClear.Text = "모두 지우기";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(109, 169);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(92, 26);
-            this.btnUpdate.TabIndex = 18;
+            this.btnUpdate.TabIndex = 27;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(212, 169);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(92, 26);
-            this.btnDelete.TabIndex = 17;
+            this.btnDelete.TabIndex = 28;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(6, 169);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 26);
-            this.btnAdd.TabIndex = 16;
+            this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tbxPublisher
             // 
             this.tbxPublisher.Location = new System.Drawing.Point(85, 77);
             this.tbxPublisher.Name = "tbxPublisher";
             this.tbxPublisher.Size = new System.Drawing.Size(158, 21);
-            this.tbxPublisher.TabIndex = 15;
+            this.tbxPublisher.TabIndex = 24;
             // 
             // tbxPage
             // 
             this.tbxPage.Location = new System.Drawing.Point(85, 104);
             this.tbxPage.Name = "tbxPage";
             this.tbxPage.Size = new System.Drawing.Size(158, 21);
-            this.tbxPage.TabIndex = 14;
+            this.tbxPage.TabIndex = 25;
             // 
             // lblPublisher
             // 
@@ -131,14 +146,14 @@
             this.tbxIsbn.Location = new System.Drawing.Point(85, 23);
             this.tbxIsbn.Name = "tbxIsbn";
             this.tbxIsbn.Size = new System.Drawing.Size(158, 21);
-            this.tbxIsbn.TabIndex = 11;
+            this.tbxIsbn.TabIndex = 22;
             // 
             // tbxBookName
             // 
             this.tbxBookName.Location = new System.Drawing.Point(85, 50);
             this.tbxBookName.Name = "tbxBookName";
             this.tbxBookName.Size = new System.Drawing.Size(158, 21);
-            this.tbxBookName.TabIndex = 10;
+            this.tbxBookName.TabIndex = 23;
             // 
             // lblIsbn
             // 
@@ -176,6 +191,7 @@
             this.dataGridViewBook.RowTemplate.Height = 23;
             this.dataGridViewBook.Size = new System.Drawing.Size(756, 201);
             this.dataGridViewBook.TabIndex = 0;
+            this.dataGridViewBook.CurrentCellChanged += new System.EventHandler(this.DataGridViewBook_CurrentCellChanged);
             // 
             // BookForm
             // 
@@ -210,5 +226,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dataGridViewBook;
+        private System.Windows.Forms.Button btnClear;
     }
 }

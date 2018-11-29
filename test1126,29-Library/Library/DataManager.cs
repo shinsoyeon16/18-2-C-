@@ -84,6 +84,7 @@ namespace Library
             usersOutput += "</users>";
             File.WriteAllText(@"./Books.xml", booksOutput);
             File.WriteAllText(@"./Users.xml", usersOutput);
+            Load();
         }
     }
 }
