@@ -1,0 +1,19 @@
+﻿<Window x:Class="lesson1205.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lesson1205"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="199*"/>
+            <RowDefinition Height="220*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtBlock" Text="{Binding Speed}" HorizontalAlignment="Left" Margin="75,40,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="43" Width="245"/>
+        <Button Content="SpeedUp" HorizontalAlignment="Left" Height="59" Margin="79,98,0,0" VerticalAlignment="Top" Width="241" Click="Button_Click"/>
+        <Button Content="SpeedDown" HorizontalAlignment="Left" Height="59" Margin="378,98,0,0" VerticalAlignment="Top" Width="235" Click="Button_Click_1"/>
+       <local:CarButton Content="Car1" Background="Aqua"/>
+    </Grid>
+</Window>
