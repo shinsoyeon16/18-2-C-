@@ -14,6 +14,6 @@
         <TextBlock x:Name="txtBlock" Text="{Binding Speed}" HorizontalAlignment="Left" Margin="75,40,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="43" Width="245"/>
         <Button Content="SpeedUp" HorizontalAlignment="Left" Height="59" Margin="79,98,0,0" VerticalAlignment="Top" Width="241" Click="Button_Click"/>
         <Button Content="SpeedDown" HorizontalAlignment="Left" Height="59" Margin="378,98,0,0" VerticalAlignment="Top" Width="235" Click="Button_Click_1"/>
-       <local:CarButton Content="Car1" Background="Aqua"/>
+       <!--<local:CarButton Content="Car1" Background="Aqua"/>-->
     </Grid>
 </Window>
