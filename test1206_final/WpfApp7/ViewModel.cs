@@ -48,14 +48,15 @@ namespace WpfApp7
         {
             car = new Car();
             MyCommand = new Command(ExecuteMethod);
-            isCarRun = "Hidden";
+            car.isCarRun = "Hidden";
+            CarChanged();
         }
         private void ExecuteMethod(object obj)
         {
             switch ((string)obj)
             {
-                case "Accelerate": { car.Accelerate(); break; }
-                case "Break": { car.Break(); break; }
+                case "Accelerate": { if (Speed == 700) { MessageBox.Show("속력을 올릴 수 없습니다."); break; } car.Accelerate(); break; }
+                case "Break": { if (Speed == 0) { MessageBox.Show("속력을 내릴 수 없습니다."); break; } car.Break(); break; }
                 case "Stop": { car.Stop(); break; }
                 default: { if (obj.ToString() == "") { MessageBox.Show("차 이름을 입력해주십시오."); break; } car.Start(obj);  break; }
             }

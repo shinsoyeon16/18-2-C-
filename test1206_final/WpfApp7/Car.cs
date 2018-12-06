@@ -15,7 +15,7 @@ namespace WpfApp7
         public int Speed { get; set; }
         public string Position { get; set; }
         public string isCarRun { get; set; }
-
+        
         public void Start(object obj) {
             Speed = 0;
             isCarRun = "Visible";

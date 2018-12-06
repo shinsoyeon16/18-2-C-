@@ -35,7 +35,7 @@
 
         <Button Grid.Row="4" Visibility="{Binding isCarRun}"
                        Width="75" Margin="{Binding Position}" HorizontalAlignment="Left"
-                       Content="{Binding Title}" FontSize="12" Background="Red" Grid.RowSpan="2" />
+                       Content="{Binding Title}" FontSize="12" Background="Red" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
