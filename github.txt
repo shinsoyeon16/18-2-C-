@@ -43,4 +43,4 @@ git merge [병합할브랜치] // 지금있는 브랜치에 병합할브랜치가 합쳐짐
 git remote update
 git fetch
 git fetch --prune
-야호
+야호 랄랄
